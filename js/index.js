@@ -1,26 +1,35 @@
 let dataset = fetch("../data.json")
   .then((result) => result.json())
   .then((data) => {
-    // log de data naar de console
     // console.log(data);
-
     // voor elk object laten we alleen de value zien van de onderstaande key
     data.forEach((obj) => {
-      // console.log(
-      //   obj["Wat is je favoriete soort huisdier?"]
-      //     .toLowerCase()
-      //     .replace("of", "")
-      // );
+      const favPet = obj["Wat is je favoriete soort huisdier?"];
+      const removeCaps = makeLowerCase(favPet);
+      const splitString = takeFirstWord(favPet);
 
-      let cleanResult = cleanString(obj["Wat is je favoriete soort huisdier?"]);
-
-      console.log(cleanResult);
+      displayDataset(removeCaps);
     });
   });
 
-function cleanString(str) {
-  let makeLowerCase = str.toLowerCase();
-  let takeFirstWord = str.split(" ").pop();
+// Functies voor het opschonen van de input van de dataset
 
-  return makeLowerCase, takeFirstWord;
+function makeLowerCase(str) {
+  return str.toLowerCase();
+}
+
+function takeFirstWord(str) {
+  return str.split(" ").pop();
+}
+
+// Functie voor het laten displayen van de data naar een aparte section in de html
+
+function displayDataset(data) {
+  const question = data;
+
+  const questionContainer = document.querySelector(".print_section");
+
+  const paragraph = document.createElement("p");
+  paragraph.innerHTML = question;
+  questionContainer.appendChild(paragraph);
 }
