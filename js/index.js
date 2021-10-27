@@ -20,6 +20,7 @@ let dataset = fetch("../data.json")
 
 function cleanString(str) {
   let makeLowerCase = str.toLowerCase();
+  let takeFirstWord = str.split(" ").pop();
 
-  return makeLowerCase;
+  return makeLowerCase, takeFirstWord;
 }
