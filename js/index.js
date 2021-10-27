@@ -6,9 +6,9 @@ let dataset = fetch("../data.json")
     data.forEach((obj) => {
       const favPet = obj["Wat is je favoriete soort huisdier?"];
       const removeCaps = makeLowerCase(favPet);
-      const splitString = takeFirstWord(favPet);
+      const splitString = takeFirstWord(removeCaps);
 
-      displayDataset(removeCaps);
+      displayDataset(splitString);
     });
   });
 
