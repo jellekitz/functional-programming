@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-family: "Cabin", sans-serif;
+}
+
+section {
+  background-color: #dee2e6;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
