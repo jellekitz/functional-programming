@@ -6,8 +6,10 @@ let dataset = fetch("../data.json")
       const favPet = obj["Wat is je favoriete soort huisdier?"];
       const removeCaps = makeLowerCase(favPet);
       const splitString = takeFirstWord(removeCaps);
+      const replaceRaceResult = replaceRace(splitString);
+      const replaceLatinResult = replaceLatin(replaceRaceResult);
 
-      displayDataset(splitString);
+      displayDataset(replaceLatinResult);
     });
   });
 
@@ -19,6 +21,14 @@ function makeLowerCase(str) {
 
 function takeFirstWord(str) {
   return str.split(" ").pop();
+}
+
+function replaceRace(str) {
+  return str.replaceAll("dachshund", "hond");
+}
+
+function replaceLatin(str) {
+  return str.replaceAll("sumatraensis", "geit");
 }
 
 // Functie voor het laten displayen van de data naar een aparte section in de html
