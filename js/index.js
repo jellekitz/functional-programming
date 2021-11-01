@@ -9,14 +9,16 @@ let dataset = fetch(
       const drinkName = obj["strDrink"];
 
       const removeCaps = makeLowerCase(drinkName);
-      const addCaps = makeUpperCase(removeCaps);
+      const addCaps = capitalize(removeCaps);
       const removeSpace = noSpace(addCaps);
 
       console.log(removeSpace);
     });
   });
 
-function makeUpperCase(str) {
+// Schoonmaak functies, voor het schoonmaken van de data
+
+function capitalize(str) {
   const firstLetter = str.charAt(0);
   const cap = firstLetter.toUpperCase();
 
