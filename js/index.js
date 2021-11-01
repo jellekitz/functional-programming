@@ -38,6 +38,8 @@ function noSpace(str) {
   return str.replace(". ", ".");
 }
 
+// Functies voor het displayen van de data
+
 function displayTitle(title) {
   const cocktailTitle = title;
   const container = document.querySelector(".container");
@@ -46,4 +48,17 @@ function displayTitle(title) {
 
   heading.innerHTML = cocktailTitle;
   container.appendChild(heading);
+}
+
+function displayImg(img) {
+  const cocktailImg = img;
+  const container = document.querySelector(".container");
+
+  const image = document.createElement("img");
+
+  image.setAttribute("src", `${img}`);
+
+  image.innerHTML = cocktailImg;
+
+  container.appendChild(image);
 }
