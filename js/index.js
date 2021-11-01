@@ -9,9 +9,23 @@ let dataset = fetch(
       const drinkName = obj["strDrink"];
 
       const removeCaps = makeLowerCase(drinkName);
-      console.log(removeCaps);
+      const addCaps = makeUpperCase(removeCaps);
+
+      console.log(addCaps);
     });
   });
+
+function makeUpperCase(str) {
+  const firstLetter = str.charAt(0);
+  const cap = firstLetter.toUpperCase();
+
+  const full = str;
+  const slice = full.slice(1);
+
+  const together = cap + slice;
+
+  return together;
+}
 
 function makeLowerCase(str) {
   return str.toLowerCase();
