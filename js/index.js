@@ -7,12 +7,14 @@ let dataset = fetch(
 
     data.drinks.forEach((obj) => {
       const drinkName = obj["strDrink"];
+      const drinkImgUrl = obj["strDrinkThumb"];
 
       const removeCaps = makeLowerCase(drinkName);
       const addCaps = capitalize(removeCaps);
       const removeSpace = noSpace(addCaps);
 
       displayTitle(removeSpace);
+      displayImg(drinkImgUrl);
     });
   });
 
