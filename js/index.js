@@ -10,8 +10,9 @@ let dataset = fetch(
 
       const removeCaps = makeLowerCase(drinkName);
       const addCaps = makeUpperCase(removeCaps);
+      const removeSpace = noSpace(addCaps);
 
-      console.log(addCaps);
+      console.log(removeSpace);
     });
   });
 
@@ -29,4 +30,8 @@ function makeUpperCase(str) {
 
 function makeLowerCase(str) {
   return str.toLowerCase();
+}
+
+function noSpace(str) {
+  return str.replace(". ", ".");
 }
