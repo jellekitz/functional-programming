@@ -71,8 +71,8 @@ function displayLabel(label) {
   const cocktailLabel = label;
   const container = document.querySelector(".container");
 
-  const label = document.createElement("span");
+  const span = document.createElement("span");
 
-  label.innerHTML = cocktailLabel;
-  container.appendChild(heading);
+  span.innerHTML = cocktailLabel;
+  container.appendChild(span);
 }
