@@ -14,9 +14,7 @@ let dataset = fetch(
       const addCaps = capitalize(removeCaps);
       const removeSpace = noSpace(addCaps);
 
-      displayTitle(removeSpace);
-      displayImg(drinkImgUrl);
-      displayLabel(drinkLabel);
+      displayArticles(removeSpace, drinkImgUrl, drinkLabel);
     });
   });
 
@@ -44,35 +42,41 @@ function noSpace(str) {
 
 // Functies voor het displayen van de data
 
-function displayTitle(title) {
-  const cocktailTitle = title;
-  const container = document.querySelector(".container");
+function displayTitle(data) {
+  const cocktailTitle = data;
 
   const heading = document.createElement("h2");
 
   heading.innerHTML = cocktailTitle;
-  container.appendChild(heading);
+
+  return cocktailTitle;
 }
 
-function displayImg(img) {
-  const cocktailImg = img;
-  const container = document.querySelector(".container");
+function displayImg(data) {
+  const cocktailImg = data;
 
   const image = document.createElement("img");
-
-  image.setAttribute("src", `${img}`);
+  image.setAttribute("src", `${data}`);
 
   image.innerHTML = cocktailImg;
-
-  container.appendChild(image);
 }
 
-function displayLabel(label) {
-  const cocktailLabel = label;
-  const container = document.querySelector(".container");
+function displayLabel(data) {
+  const cocktailLabel = data;
 
   const span = document.createElement("span");
 
   span.innerHTML = cocktailLabel;
-  container.appendChild(span);
+}
+
+function displayArticles(title, img, label) {
+  const createArticle = document.createElement("article");
+  createArticle.setAttribute("id", "cocktail");
+  document.body.appendChild(createArticle);
+
+  const cocktailTitle = title;
+  const cocktailImg = img;
+  const cocktailLabel = label;
+
+  createArticle.innerHTML = `<h2>${cocktailTitle}</h2><img src='${cocktailImg}' /><span>${cocktailLabel}</span>`;
 }
