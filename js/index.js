@@ -1,44 +1,12 @@
-let dataset = fetch("../data.json")
+let dataset = fetch(
+  "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a"
+)
   .then((result) => result.json())
   .then((data) => {
-    // voor elk object laten we alleen de value zien van de onderstaande key
-    data.forEach((obj) => {
-      const favPet = obj["Wat is je favoriete soort huisdier?"];
-      const removeCaps = makeLowerCase(favPet);
-      const splitString = takeFirstWord(removeCaps);
-      const replaceRaceResult = replaceRace(splitString);
-      const replaceLatinResult = replaceLatin(replaceRaceResult);
+    console.log(data);
 
-      displayDataset(replaceLatinResult);
+    data.drinks.forEach((obj) => {
+      const drinkName = obj["strDrink"];
+      console.log(drinkName);
     });
   });
-
-// Functies voor het opschonen van de input van de dataset
-
-function makeLowerCase(str) {
-  return str.toLowerCase();
-}
-
-function takeFirstWord(str) {
-  return str.split(" ").pop();
-}
-
-function replaceRace(str) {
-  return str.replaceAll("dachshund", "hond");
-}
-
-function replaceLatin(str) {
-  return str.replaceAll("sumatraensis", "geit");
-}
-
-// Functie voor het laten displayen van de data naar een aparte section in de html
-
-function displayDataset(data) {
-  const question = data;
-
-  const questionContainer = document.querySelector(".print_section");
-
-  const paragraph = document.createElement("p");
-  paragraph.innerHTML = question;
-  questionContainer.appendChild(paragraph);
-}
