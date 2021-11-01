@@ -12,7 +12,7 @@ let dataset = fetch(
       const addCaps = capitalize(removeCaps);
       const removeSpace = noSpace(addCaps);
 
-      console.log(removeSpace);
+      displayTitle(removeSpace);
     });
   });
 
@@ -36,4 +36,14 @@ function makeLowerCase(str) {
 
 function noSpace(str) {
   return str.replace(". ", ".");
+}
+
+function displayTitle(title) {
+  const cocktailTitle = title;
+  const container = document.querySelector(".container");
+
+  const heading = document.createElement("h2");
+
+  heading.innerHTML = cocktailTitle;
+  container.appendChild(heading);
 }
