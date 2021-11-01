@@ -3,6 +3,7 @@ let dataset = fetch(
 )
   .then((result) => result.json())
   .then((data) => {
+
     console.log(data);
 
     data.drinks.forEach((obj) => {
