@@ -8,6 +8,7 @@ let dataset = fetch(
     data.drinks.forEach((obj) => {
       const drinkName = obj["strDrink"];
       const drinkImgUrl = obj["strDrinkThumb"];
+      const drinkLabel = obj["strAlcoholic"];
 
       const removeCaps = makeLowerCase(drinkName);
       const addCaps = capitalize(removeCaps);
@@ -15,6 +16,7 @@ let dataset = fetch(
 
       displayTitle(removeSpace);
       displayImg(drinkImgUrl);
+      displayLabel(drinkLabel);
     });
   });
 
@@ -63,4 +65,14 @@ function displayImg(img) {
   image.innerHTML = cocktailImg;
 
   container.appendChild(image);
+}
+
+function displayLabel(label) {
+  const cocktailLabel = label;
+  const container = document.querySelector(".container");
+
+  const label = document.createElement("span");
+
+  label.innerHTML = cocktailLabel;
+  container.appendChild(heading);
 }
