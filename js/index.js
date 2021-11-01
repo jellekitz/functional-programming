@@ -3,11 +3,16 @@ let dataset = fetch(
 )
   .then((result) => result.json())
   .then((data) => {
-
     console.log(data);
 
     data.drinks.forEach((obj) => {
       const drinkName = obj["strDrink"];
-      console.log(drinkName);
+
+      const removeCaps = makeLowerCase(drinkName);
+      console.log(removeCaps);
     });
   });
+
+function makeLowerCase(str) {
+  return str.toLowerCase();
+}
