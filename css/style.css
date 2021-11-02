@@ -1,8 +1,8 @@
 .container {
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.container img {
+article img {
   width: 100%;
 }
