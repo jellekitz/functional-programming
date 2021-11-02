@@ -3,7 +3,7 @@ let dataset = fetch(
 )
   .then((result) => result.json())
   .then((data) => {
-    console.log(data);
+    // console.log(data);
 
     data.drinks.forEach((obj) => {
       const drinkName = obj["strDrink"];
@@ -42,37 +42,11 @@ function noSpace(str) {
 
 // Functies voor het displayen van de data
 
-function displayTitle(data) {
-  const cocktailTitle = data;
-
-  const heading = document.createElement("h2");
-
-  heading.innerHTML = cocktailTitle;
-
-  return cocktailTitle;
-}
-
-function displayImg(data) {
-  const cocktailImg = data;
-
-  const image = document.createElement("img");
-  image.setAttribute("src", `${data}`);
-
-  image.innerHTML = cocktailImg;
-}
-
-function displayLabel(data) {
-  const cocktailLabel = data;
-
-  const span = document.createElement("span");
-
-  span.innerHTML = cocktailLabel;
-}
-
 function displayArticles(title, img, label) {
+  const container = document.querySelector(".container");
   const createArticle = document.createElement("article");
-  createArticle.setAttribute("id", "cocktail");
-  document.body.appendChild(createArticle);
+  createArticle.setAttribute("class", "cocktail");
+  container.appendChild(createArticle);
 
   const cocktailTitle = title;
   const cocktailImg = img;
