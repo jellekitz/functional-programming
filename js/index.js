@@ -11,17 +11,18 @@ let dataset = fetch(
       const removeTitleCaps = makeLowerCase(drinkName);
       const addTitleCaps = capitalize(removeTitleCaps);
       const removeTitleSpace = noSpace(addTitleCaps);
+      const addTitleSpace = addSpace(removeTitleSpace);
 
       const removeLabelCaps = makeLowerCase(drinkLabel);
       const labelResult = translateLabel(removeLabelCaps);
 
-      displayArticles(removeTitleSpace, drinkImgUrl, labelResult);
+      displayArticles(addTitleSpace, drinkImgUrl, labelResult);
     });
   });
 
 // Schoonmaak functies, voor het schoonmaken van de data
 
-function capitalize(str) {
+const capitalize = (str) => {
   const firstLetter = str.charAt(0);
   const cap = firstLetter.toUpperCase();
 
@@ -31,23 +32,27 @@ function capitalize(str) {
   const together = cap + slice;
 
   return together;
-}
+};
 
-function makeLowerCase(str) {
+const makeLowerCase = (str) => {
   return str.toLowerCase();
-}
+};
 
-function noSpace(str) {
+const noSpace = (str) => {
   return str.replace(". ", ".");
-}
+};
 
-function translateLabel(str) {
+const addSpace = (str) => {
+  return str.replace("&", " & ");
+};
+
+const translateLabel = (str) => {
   return str.replace("alcoholic", "alcohol").replace("non", "geen");
-}
+};
 
 // Functies voor het displayen van de data
 
-function displayArticles(title, img, label) {
+const displayArticles = (title, img, label) => {
   const container = document.querySelector(".container");
   const createArticle = document.createElement("article");
   createArticle.setAttribute("class", "cocktail");
@@ -64,4 +69,4 @@ function displayArticles(title, img, label) {
       <span>bevat ${cocktailLabel}</span>
     </div>
   `;
-}
+};
