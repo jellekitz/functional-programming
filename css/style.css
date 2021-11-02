@@ -1,8 +1,36 @@
+html,
+body {
+  margin: 2rem;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Prata", serif;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+article {
+  background-color: #d0d4df;
 }
 
 article img {
+  display: block;
   width: 100%;
+}
+
+.cocktail__information {
+  padding: 0.8rem;
+}
+
+.cocktail__information h2 {
+  margin: 0 0 1rem 0;
 }

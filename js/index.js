@@ -10,11 +10,15 @@ let dataset = fetch(
       const drinkImgUrl = obj["strDrinkThumb"];
       const drinkLabel = obj["strAlcoholic"];
 
-      const removeCaps = makeLowerCase(drinkName);
-      const addCaps = capitalize(removeCaps);
-      const removeSpace = noSpace(addCaps);
+      const removeTitleCaps = makeLowerCase(drinkName);
+      const addTitleCaps = capitalize(removeTitleCaps);
+      const removeTitleSpace = noSpace(addTitleCaps);
 
-      displayArticles(removeSpace, drinkImgUrl, drinkLabel);
+      const removeLabelCaps = makeLowerCase(drinkLabel);
+      const addLabelCaps = capitalize(removeLabelCaps);
+      const removeLabelSpace = noSpace(addLabelCaps);
+
+      displayArticles(removeTitleSpace, drinkImgUrl, removeLabelSpace);
     });
   });
 
@@ -52,5 +56,11 @@ function displayArticles(title, img, label) {
   const cocktailImg = img;
   const cocktailLabel = label;
 
-  createArticle.innerHTML = `<h2>${cocktailTitle}</h2><img src='${cocktailImg}' /><span>${cocktailLabel}</span>`;
+  createArticle.innerHTML = `
+    <img src='${cocktailImg}' />
+    <div class="cocktail__information">
+      <h2>${cocktailTitle}</h2>
+      <span>${cocktailLabel}</span>
+    </div>
+  `;
 }
