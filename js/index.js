@@ -15,10 +15,9 @@ let dataset = fetch(
       const removeTitleSpace = noSpace(addTitleCaps);
 
       const removeLabelCaps = makeLowerCase(drinkLabel);
-      const addLabelCaps = capitalize(removeLabelCaps);
-      const removeLabelSpace = noSpace(addLabelCaps);
+      const labelResult = translateLabel(removeLabelCaps);
 
-      displayArticles(removeTitleSpace, drinkImgUrl, removeLabelSpace);
+      displayArticles(removeTitleSpace, drinkImgUrl, labelResult);
     });
   });
 
@@ -44,6 +43,10 @@ function noSpace(str) {
   return str.replace(". ", ".");
 }
 
+function translateLabel(str) {
+  return str.replace("alcoholic", "alcohol").replace("non", "geen");
+}
+
 // Functies voor het displayen van de data
 
 function displayArticles(title, img, label) {
@@ -60,7 +63,7 @@ function displayArticles(title, img, label) {
     <img src='${cocktailImg}' />
     <div class="cocktail__information">
       <h2>${cocktailTitle}</h2>
-      <span>${cocktailLabel}</span>
+      <span>bevat ${cocktailLabel}</span>
     </div>
   `;
 }
