@@ -48,11 +48,31 @@ h4 {
 
 article {
   background-color: #d0d4df;
+  border-radius: 1rem;
+  position: relative;
 }
 
 article img {
   display: block;
   width: 100%;
+}
+
+.alcoholic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f4836b;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.non-alcoholic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #8eba7b;
+  padding: 0.5rem;
+  color: #fff;
 }
 
 .cocktail__information {
@@ -61,4 +81,18 @@ article img {
 
 .cocktail__information h2 {
   margin: 0 0 1rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+
+  article {
+    margin: 0 0 2rem 0;
+  }
+
+  article:last-child {
+    margin: 0;
+  }
 }

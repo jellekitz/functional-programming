@@ -62,11 +62,21 @@ const displayArticles = (title, img, label) => {
   const cocktailImg = img;
   const cocktailLabel = label;
 
-  createArticle.innerHTML = `
+  if (!cocktailLabel.includes("geen")) {
+    return (createArticle.innerHTML = `
     <img src='${cocktailImg}' />
     <div class="cocktail__information">
       <h2>${cocktailTitle}</h2>
-      <span>bevat ${cocktailLabel}</span>
     </div>
-  `;
+    <div class="alcoholic">bevat ${cocktailLabel}</div>
+  `);
+  } else {
+    return (createArticle.innerHTML = `
+    <img src='${cocktailImg}' />
+    <div class="cocktail__information">
+      <h2>${cocktailTitle}</h2>
+    </div>
+    <div class="non-alcoholic">bevat ${cocktailLabel}</div>
+  `);
+  }
 };
