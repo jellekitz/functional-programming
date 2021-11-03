@@ -1,56 +1,11 @@
-let dataset = fetch(
-  "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a"
-)
-  .then((result) => result.json())
-  .then((data) => {
-    // console.log(data);
+import {
+  capitalize,
+  makeLowerCase,
+  noSpace,
+  addSpace,
+  translateLabel,
+} from "./sanitize.js";
 
-    data.drinks.forEach((obj) => {
-      const drinkName = obj["strDrink"];
-      const drinkImgUrl = obj["strDrinkThumb"];
-      const drinkLabel = obj["strAlcoholic"];
+import { displayArticles } from "./render.js";
 
-      const removeCaps = makeLowerCase(drinkName);
-      const addCaps = capitalize(removeCaps);
-      const removeSpace = noSpace(addCaps);
-
-      displayArticles(removeSpace, drinkImgUrl, drinkLabel);
-    });
-  });
-
-// Schoonmaak functies, voor het schoonmaken van de data
-
-function capitalize(str) {
-  const firstLetter = str.charAt(0);
-  const cap = firstLetter.toUpperCase();
-
-  const full = str;
-  const slice = full.slice(1);
-
-  const together = cap + slice;
-
-  return together;
-}
-
-function makeLowerCase(str) {
-  return str.toLowerCase();
-}
-
-function noSpace(str) {
-  return str.replace(". ", ".");
-}
-
-// Functies voor het displayen van de data
-
-function displayArticles(title, img, label) {
-  const container = document.querySelector(".container");
-  const createArticle = document.createElement("article");
-  createArticle.setAttribute("class", "cocktail");
-  container.appendChild(createArticle);
-
-  const cocktailTitle = title;
-  const cocktailImg = img;
-  const cocktailLabel = label;
-
-  createArticle.innerHTML = `<h2>${cocktailTitle}</h2><img src='${cocktailImg}' /><span>${cocktailLabel}</span>`;
-}
+import { dataset } from "./fetch.js";

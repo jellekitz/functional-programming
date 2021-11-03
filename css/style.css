@@ -1,8 +1,98 @@
+html,
+body {
+  margin: 2rem;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Prata", serif;
+}
+
+.container-title {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 3rem 0;
+}
+
+.container-title h1 {
+  margin: auto 0.7rem 0 0;
+  font-size: 3rem;
+  color: #f4836b;
+}
+
+.container-title h2 {
+  margin: auto 0 0.6rem 0;
+  font-size: 1.2rem;
+  color: #50617b;
+}
+
+.container-title h3 {
+  width: 100%;
+  display: block;
+  font-size: 0.7rem;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.8rem;
+}
+
+.container h2 {
+  color: #f4836b;
+}
+
+article {
+  background-color: #d0d4df;
+  border-radius: 1rem;
+  position: relative;
 }
 
 article img {
+  display: block;
   width: 100%;
+}
+
+.alcoholic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f4836b;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.non-alcoholic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #8eba7b;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.cocktail__information {
+  padding: 0.8rem;
+}
+
+.cocktail__information h2 {
+  margin: 0 0 1rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+
+  article {
+    margin: 0 0 2rem 0;
+  }
+
+  article:last-child {
+    margin: 0;
+  }
 }
