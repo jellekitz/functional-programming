@@ -30,6 +30,10 @@ let dataset = fetch(
 
       displayArticles(addTitleSpace, drinkImgUrl, labelResult); // De opgeschoonde data geven we mee als parameter in de displayArticles functie.
     });
+  })
+  .catch((err) => {
+    // mocht de data niet opgehaald kunnen worden throwen we een error, deze log ik hieronder
+    console.log("Error:", err);
   });
 
 export { dataset }; // hier exporteer ik dataset
