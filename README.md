@@ -7,17 +7,17 @@ Schrijf een programma dat een externe dataset / API inlaad op de wijze van funct
 
 ## Inhoudsopgave 📑
 
-* [Assesment](#Assesment)
-* 📑 [Inhoudsopgave](#Inhoudsopgave)
-* 📚 [Opdrachten](#Opdrachten)
-  * 📝 [Survey opdracht](#Survey-opdracht)
-  * 👨‍🎓 [Concept eindopdracht}(#Concept-eindopdracht)
-* ✔️ [To-do's](#To-do's)
-* 📕 [Concept](#Concept)
-* ⚙️ [Installatie](#Installatie)
-* 🍸 [TheCocktailDB](#TheCocktailDB)
-* ℹ️ [Bronnen](#Bronnen)
-* 👮‍ [Licence](#Licence)
+* [Assesment](#assesment)
+* 📑 [Inhoudsopgave](#inhoudsopgave)
+* 📚 [Opdrachten](#opdrachten)
+  * 📝 [Survey opdracht](#survey-opdracht)
+  * 👨‍🎓 [Concept eindopdracht}(#concept-eindopdracht)
+* ✔️ [To-do's](#to-do's)
+* 📕 [Concept](#concept)
+* ⚙️ [Installatie](#installatie)
+* 🍸 [TheCocktailDB](#theCocktailDB)
+* ℹ️ [Bronnen](#bronnen)
+* 👮‍ [Licence](#licence)
 
 ## Opdrachten 📚
 Deze twee weken van functional-programming staan in het teken van twee opdrachten: 
