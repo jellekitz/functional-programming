@@ -30,6 +30,8 @@ Informatie over de survey opdracht kan je vinden in de [wiki](https://github.com
 ### Eindopdracht 👨‍🎓
 De eindopdracht staat in deze readme beschreven, je kunt de code terug vinden hier boven.
 
+Mijn eindopdracht staat ook live: https://jellekitz.github.io/functional-programming/
+
 ## To-do's ✔️
 TIjdens dit project ben ik aan de slag gegaan met het project board van Github, deze kan je [hier](https://github.com/jellekitz/functional-programming/projects/1) bekijken.
 
