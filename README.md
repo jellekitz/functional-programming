@@ -7,17 +7,17 @@ Schrijf een programma dat een externe dataset / API inlaad op de wijze van funct
 
 ## Inhoudsopgave 📑
 
-* [Assesment](Assesment)
-* 📑 Inhoudsopgave
-* 📚 Opdrachten
-  * 📝 Survey opdracht
-  * 👨‍🎓 Concept eindopdracht
-* ✔️ To-do's
-* 📕 Concept
-* ⚙️ Installatie
-* 🍸 theCocktailDB
-* ℹ️ Bronnen
-* 👮‍ licence
+* [Assesment](#Assesment)
+* 📑 [Inhoudsopgave](#Inhoudsopgave)
+* 📚 [Opdrachten](#Opdrachten)
+  * 📝 [Survey opdracht](#Survey-opdracht)
+  * 👨‍🎓 [Concept eindopdracht}(#Concept-eindopdracht)
+* ✔️ [To-do's](#To-do's)
+* 📕 [Concept](#Concept)
+* ⚙️ [Installatie](#Installatie)
+* 🍸 [TheCocktailDB](#TheCocktailDB)
+* ℹ️ [Bronnen](#Bronnen)
+* 👮‍ [Licence](#Licence)
 
 ## Opdrachten 📚
 Deze twee weken van functional-programming staan in het teken van twee opdrachten: 
@@ -46,7 +46,7 @@ _Doe dit op een handige plek op je machine._
 $ git clone https://github.com/jellekitz/functional-programming.git
 ```
 
-## theCocktailDB 🍸
+## TheCocktailDB 🍸
 Ik heb de dataset / API gebruikt van theCocktailDB, voor meer informatie over theCocktailDB verwijs ik je naar de website van [theCocktailDB](https://www.thecocktaildb.com/) zelf.
 
 ## Bronnen ℹ️
