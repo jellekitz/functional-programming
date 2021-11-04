@@ -11,7 +11,7 @@ Schrijf een programma dat een externe dataset / API inlaad op de wijze van funct
 * 📑 [Inhoudsopgave](#inhoudsopgave)
 * 📚 [Opdrachten](#opdrachten)
   * 📝 [Survey opdracht](#survey-opdracht)
-  * 👨‍🎓 [Concept eindopdracht}(#concept-eindopdracht)
+  * 👨‍🎓 [Concept eindopdracht](#concept-eindopdracht)
 * ✔️ [To-do's](#to-do's)
 * 📕 [Concept](#concept)
 * ⚙️ [Installatie](#installatie)
